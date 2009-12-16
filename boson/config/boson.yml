@@ -1,0 +1,10 @@
+:libraries:
+  clipboard:
+    :commands:
+      paste:
+        :description: Paste to clipboard
+      copy:
+        :description: Copy to clipboard
+    :class_commands:
+      paste: Clipboard.read
+      copy: Clipboard.write
