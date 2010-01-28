@@ -1,4 +1,9 @@
 :libraries:
+  pubmed:
+    :commands:
+      query:
+        :options:
+          :email: mail@michaelbarton.me.uk
   clipboard:
     :commands:
       paste:
