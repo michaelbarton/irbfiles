@@ -1,3 +1,10 @@
+:pipe_options:
+    :browser:
+      :type: :boolean
+      :desc: Open in browser
+    :copy:
+      type: :boolean
+      :desc: Copy to clipboard
 :libraries:
   pubmed:
     :commands:
