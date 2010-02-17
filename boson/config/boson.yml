@@ -1,22 +1,41 @@
+---
+:console_defaults: []
+
 :pipe_options:
-    :browser:
-      :type: :boolean
-      :desc: Open in browser
-    :copy:
-      type: :boolean
-      :desc: Copy to clipboard
+  :copy:
+    :pipe: :copy
+    :desc: Copy to clipboard
+    type: :boolean
+  :browser:
+    :type: :boolean
+    :pipe: :browser
+    :desc: Open in browser
+:command_aliases: {}
+
 :libraries:
+  clipboard:
+    :class_commands:
+      copy: Clipboard.write
+      paste: Clipboard.read
+    :commands:
+      copy:
+        :description: Copy to clipboard
+      paste:
+        :description: Paste to clipboard
   pubmed:
     :commands:
       query:
+        :args:
+        - - terms
+        - - options
+          - {}
+
         :options:
+          :journal: :string
           :email: mail@michaelbarton.me.uk
-  clipboard:
-    :commands:
-      paste:
-        :description: Paste to clipboard
-      copy:
-        :description: Copy to clipboard
-    :class_commands:
-      paste: Clipboard.read
-      copy: Clipboard.write
+          :authors: :array
+          :year: :numeric
+          :number: 5
+:defaults:
+- menu_pipe
+:option_underscore_search: true
