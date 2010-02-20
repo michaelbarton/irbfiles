@@ -26,12 +26,11 @@
     :commands:
       query:
         :args:
-        - - terms
         - - options
           - {}
-
         :options:
           :journal: :string
+          :terms: :string
           :email: mail@michaelbarton.me.uk
           :authors: :array
           :year: :numeric
